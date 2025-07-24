@@ -1,0 +1,19 @@
+[project]
+name = "webporto"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "andi akhsanul",email = "116082109+andiakhsanul@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "webporto", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
