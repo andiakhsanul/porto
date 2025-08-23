@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'app.apps.AppMainConfig',  # Register the app
+    'app.apps.AppMainConfig',  #lalu ini merupakan tempat untuk mendefinisikan aplikasi yang telah kita buat atau registrasi aplikasi
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'webporto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  # Path to your templates directory
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,6 +80,8 @@ DATABASES = {
     }
 }
 
+# Mengcustom user model validation
+AUTH_USER_MODEL = 'app.UserProfile'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
