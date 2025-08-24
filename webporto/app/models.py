@@ -22,6 +22,4 @@ class Article(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def save(self, *args, **kwargs):
-        self.word_count = len(self.content.split()) if self.content else 0
-        super().save(*args, **kwargs)
+    
